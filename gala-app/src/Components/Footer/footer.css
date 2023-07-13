@@ -1,12 +1,16 @@
 :root {
   --PrimaryColor: hsl(199, 100%, 33%);
   --SecondaryColor: hsl(187, 85%, 43%);
-  --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%),hsl(199, 100%, 33%));
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
   --whiteColor: hsl(0, 0%, 100%);
   --blackColor: hsl(201, 33%, 16%);
   --textColor: hsl(240, 4%, 36%);
   --whiteColorDeam: hsl(0, 0%, 93%);
-  --greyText: rgb(190,190,190);
+  --greyText: rgb(190, 190, 190);
   --inputColor: rgb(239, 239, 239);
   --bodyColor: rgb(240, 240, 246);
   --cardBG: rgb(255, 255, 255);
@@ -145,31 +149,101 @@
   color: var(--PrimaryColor);
 }
 .footer .secContent .footerCard .footerLinks {
+  display: grid;
   flex-basis: 50%;
   width: 100%;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
 }
-.footer .secContent .footerCard .footerLinks .linkGroup {
+.footer .secContent .footerCard .footerLinks .linkGroup .groupTitle {
   display: block;
   font-weight: 600;
   color: var(--blackColor);
   margin-bottom: 0.5rem;
 }
-.footer .secContent .footerCard .footerLinks .footerList {
+.footer .secContent .footerCard .footerLinks .linkGroup .footerList {
   font-size: 15px;
   color: var(--textColor);
   transition: 0.3s ease-in-out;
 }
-.footer .secContent .footerCard .footerLinks .footerList .icon {
+.footer .secContent .footerCard .footerLinks .linkGroup .footerList .icon {
   font-size: 15px;
   color: var(--greyText);
 }
-.footer .secContent .footerCard .footerLinks .footerList:hover {
+.footer .secContent .footerCard .footerLinks .linkGroup .footerList:hover {
   color: var(--PrimaryColor);
   transform: translateX(7px);
 }
-.footer .secContent .footerCard .footerLinks .footerList:hover .icon {
+.footer .secContent .footerCard .footerLinks .linkGroup .footerList:hover .icon {
   color: var(--SecondaryColor);
+}
+.footer .secContent .footerCard .footerDiv {
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--SecondaryColor);
+  padding: 0.5rem 2rem;
+}
+.footer .secContent .footerCard .footerDiv small {
+  font-size: 10px;
+  color: var(--whiteColor);
+}
+
+@media screen and (min-width: 500px) {
+  .footer .secContent .footerCard .footerLinks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 1rem;
+  }
+  .footer .secContent .footerCard .footerDiv {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .footer .secContent .footerCard .footerDiv small {
+    font-size: 14px;
+    color: var(--whiteColor);
+  }
+}
+@media screen and (min-width: 660px) {
+  .footer {
+    padding: 5rem 0;
+  }
+  .footer .secContent .contactDiv {
+    flex-direction: row;
+  }
+  .footer .secContent .footerCard {
+    flex-direction: row;
+    border-radius: 1rem;
+  }
+  .footer .secContent .footerCard .footerLinks {
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer .secContent .footerCard {
+    padding: 3rem 1rem;
+  }
+  .footer .secContent .footerCard .footerIntro .footerParagraph {
+    font-size: 15px;
+    color: var(--textColor);
+  }
+  .footer .secContent .footerCard .footerIntro .footerSocials {
+    -moz-column-gap: 0.5rem;
+         column-gap: 0.5rem;
+  }
+  .footer .secContent .footerCard .footerIntro .footerSocials .icon {
+    color: var(--textColor);
+    font-size: 25px;
+  }
+  .footer .secContent .footerCard .footerIntro .footerSocials .icon:hover {
+    color: var(--PrimaryColor);
+  }
+  .footer .secContent .footerCard .footerLinks .linkGroup .footerList {
+    font-size: 16px;
+    padding: 5px 0;
+  }
 }/*# sourceMappingURL=footer.css.map */

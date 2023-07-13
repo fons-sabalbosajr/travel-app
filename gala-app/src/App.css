@@ -21,6 +21,10 @@
     --cardBG: rgb(255, 255, 255);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 a{
     text-decoration: none;
 }
@@ -78,4 +82,27 @@ input{
 body{
     background: var(--bodyColor);
 }
+
+///MEDIA QERIES================================
+
+@media screen and (min-width: 1240px) {
+    .container{
+        width: 80% !important;
+        margin: auto !important;
+        margin-top: 5rem !important;
+        margin-bottom: 4rem !important;
+    }
+
+    
+    .section{
+        padding: 6rem 0 4rem;
+    }
+}
+
+@media screen and (min-width: 2560px){
+    body{
+        zoom: 1.7;
+    }
+}
+
 
